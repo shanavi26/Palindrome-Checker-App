@@ -1,7 +1,7 @@
 public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
-
+        //USE CASE 1
         System.out.println("==========================================");
         System.out.println("   Welcome to Palindrome Checker System   ");
         System.out.println("==========================================");
@@ -11,6 +11,8 @@ public class PalindromeCheckerApp {
         System.out.println("Ready for palindrome operations...");
         System.out.println("========================================");
 
+
+        //USE CASE 2
         String input = "madam";
         boolean isPalindrome = true;
 
@@ -22,6 +24,21 @@ public class PalindromeCheckerApp {
         }
 
         if (isPalindrome) {
+            System.out.println(input + " is a palindrome");
+        } else {
+            System.out.println(input + " is not a palindrome");
+        }
+
+
+        //USE CASE 3
+        String input = "madam";
+        String reversed = "";
+
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed += input.charAt(i);
+        }
+
+        if (input.equals(reversed)) {
             System.out.println(input + " is a palindrome");
         } else {
             System.out.println(input + " is not a palindrome");

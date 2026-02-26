@@ -9,5 +9,6 @@ public class PalindromeCheckerApp {
         System.out.println();
         System.out.println("Application started successfully.");
         System.out.println("Ready for palindrome operations...");
+        System.out.println("========================================");
     }
 }

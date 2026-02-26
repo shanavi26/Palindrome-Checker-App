@@ -1,4 +1,5 @@
-public class PalindromeCheckerApp {
+import java.util.Deque;
+import java.util.LinkedList;public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
@@ -89,6 +90,31 @@ public class PalindromeCheckerApp {
 
         while (!queue.isEmpty()) {
             if (!queue.remove().equals(stack.pop())) {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        if (isPalindrome) {
+            System.out.println(input + " is a palindrome.");
+        } else {
+            System.out.println(input + " is not a palindrome.");
+        }
+
+
+        //USE CASE 7
+        String input = "civic";
+
+        Deque<Character> deque = new LinkedList<>();
+
+        for (char c : input.toCharArray()) {
+            deque.add(c);
+        }
+
+        boolean isPalindrome = true;
+
+        while (deque.size() > 1) {
+            if (!deque.removeFirst().equals(deque.removeLast())) {
                 isPalindrome = false;
                 break;
             }
